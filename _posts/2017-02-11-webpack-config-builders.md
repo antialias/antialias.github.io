@@ -25,5 +25,14 @@ Same application, code run in multiple contexts
 Unit tests run natively, no need to build scss, optimize bundles with tree shaking
 Devboard cards, need scans, but don't need optimization, need built scss, don't need styles extracted
 
+There are a variety of strategies for expressing partial configurations for webpack, or for any application that uses an object for its configuration:
 
+ Start with a base configuration, perhaps this is a shared module or something
+ 
+  Each application in your organization consumes this base config then changes it to suit its needs. 
 
+ 
+  
+   
+  Config builder strategy
+  The config builder strategy invertsthis approach. Each application expresses its own are config as a plain webpack config, then applies the builders that it needs to the config, each builder outputs a new modified config 
