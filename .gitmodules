@@ -1,0 +1,3 @@
+[submodule "oldhomestead"]
+	path = oldhomestead
+	url = https://github.com/antialias/static-old-homestead.git
